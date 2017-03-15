@@ -1,0 +1,10 @@
+<h3>My dashboard </h3>
+
+<h3>Top Address</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let address of addresses"  [routerLink]="['/detail', address.id]"  class="col-1-4">
+    <div class="module address">
+      <h4>{{address.name}}</h4>
+    </div>
+  </a>
+</div>

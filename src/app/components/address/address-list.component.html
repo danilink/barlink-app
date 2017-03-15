@@ -1,0 +1,19 @@
+<p>Address list</p>
+<div class="row">
+  <div class="col-md-6">
+    <ul class="list-group addresses">
+      <li *ngFor="let address of addresses" (click)="onSelect(address)"  [class.selected]="address === selectedAddress">
+        <span class="badge badge-default">{{address.id}}</span> {{address.name}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="selectedAddress">
+      <h2>
+        {{selectedAddress.name | uppercase}} is my hero
+      </h2>
+      <button (click)="gotoDetail()">View Details</button>
+    </div>
+  </div>
+</div>
+  <button routerLink="/sidekicks">Go to sidekicks</button>
