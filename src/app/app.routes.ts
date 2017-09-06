@@ -23,12 +23,12 @@ export class AppRoutingModule {}*/
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PageNotFoundComponent } from './components/layouts/not-found.component';
+import { PageNotFoundComponent } from './layouts/not-found.component';
 
 const routes: Routes = [
     {
         path: '',
-        loadChildren: './components/layouts/layout.module#LayoutModule'
+        loadChildren: './layouts/layout.module#LayoutModule'
     },
   /*  { path: 'login', loadChildren: './login/login.module#LoginModule' },
     { path: 'signup', loadChildren: './signup/signup.module#SignupModule' },

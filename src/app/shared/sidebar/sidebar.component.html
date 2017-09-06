@@ -1,0 +1,13 @@
+<nav class="sidebar mdb-sidenav" [ngClass]="{sidebarPushRight: isActive}">
+    <ul class="list-group">
+        <a routerLink="/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;Principal
+        </a>
+        <a [routerLink]="['/ventas']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;Ventas
+        </a>
+        <a [routerLink]="['/gastos']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-table"></i>&nbsp;Gastos
+        </a>
+    </ul>
+</nav>

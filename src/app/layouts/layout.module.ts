@@ -4,8 +4,8 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { LayoutRoutingModule } from './layout.routes';
 import { LayoutComponent } from './layout.component';
-import { HeaderComponent} from './headers';
-import { HomeComponent}  from '../../components/home/index';
+import { HeaderComponent, SidebarComponent} from '../shared';
+import { HomeComponent}  from '../home/index';
 
 @NgModule({
     imports: [
@@ -16,7 +16,8 @@ import { HomeComponent}  from '../../components/home/index';
     declarations: [
         LayoutComponent,
         HeaderComponent,
-        HomeComponent
+        HomeComponent,
+        SidebarComponent
     ]
 })
 export class LayoutModule { }
