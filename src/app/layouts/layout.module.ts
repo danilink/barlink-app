@@ -6,6 +6,7 @@ import { LayoutRoutingModule } from './layout.routes';
 import { LayoutComponent } from './layout.component';
 import { HeaderComponent, SidebarComponent} from '../shared';
 import { HomeComponent}  from '../home/index';
+import { AddressListComponent}  from '../address/index';
 
 @NgModule({
     imports: [
@@ -17,7 +18,8 @@ import { HomeComponent}  from '../home/index';
         LayoutComponent,
         HeaderComponent,
         HomeComponent,
-        SidebarComponent
+        SidebarComponent,
+        AddressListComponent
     ]
 })
 export class LayoutModule { }
