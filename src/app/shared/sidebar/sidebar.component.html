@@ -1,13 +1,13 @@
 <nav class="sidebar mdb-sidenav" [ngClass]="{sidebarPushRight: isActive}">
     <ul class="list-group">
         <a routerLink="/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-dashboard"></i>&nbsp;Principal
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'main' | translate }}
         </a>
         <a [routerLink]="['/income']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;Ventas
+            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'incomes' | translate }}
         </a>
         <a [routerLink]="['/expenses']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-table"></i>&nbsp;Gastos
+            <i class="fa fa-fw fa-table"></i>&nbsp;{{ 'expenses' | translate }}
         </a>
     </ul>
 </nav>

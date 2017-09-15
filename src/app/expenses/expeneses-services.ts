@@ -1,10 +1,6 @@
 import { Injectable }     from '@angular/core';
-import { Http, Response } from '@angular/http';
 import { DataTableParams } from 'angular-4-data-table';
 import 'rxjs/add/operator/toPromise';
-
-
-const BASE_URL = 'http://localhost:3000';
 
 function paramsToQueryString(params: DataTableParams) {
     let result = [];
@@ -27,10 +23,11 @@ function paramsToQueryString(params: DataTableParams) {
 
 
 @Injectable()
-export class RemoteService {
+export class ExpensesService {
 
-    constructor (private http: Http) {}
-
+  getExpenses(): Promise<Any[]> {
+    return Promise.resolve(HEROES);
+  }
     query(params: DataTableParams) {
         return this.http.get(BASE_URL + '/people?' + paramsToQueryString(params)).toPromise()
             .then((resp: Response) => ({

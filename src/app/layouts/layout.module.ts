@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { LayoutRoutingModule } from './layout.routes';
 import { LayoutComponent } from './layout.component';
@@ -15,6 +16,7 @@ import { DataTableModule } from 'angular-4-data-table';
         CommonModule,
         NgbDropdownModule.forRoot(),
         LayoutRoutingModule,
+        TranslateModule,
         DataTableModule
     ],
     declarations: [

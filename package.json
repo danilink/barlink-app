@@ -25,6 +25,8 @@
     "@angular/platform-server": "^4.3.2",
     "@angular/router": "^4.3.2",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.23",
+    "@ngx-translate/core": "^8.0.0",
+    "@ngx-translate/http-loader": "^2.0.0",
     "angular-bootstrap-md": "^4.3.1",
     "bootstrap": "^4.0.0-alpha.6",
     "bootstrap-sass": "^3.3.7",
