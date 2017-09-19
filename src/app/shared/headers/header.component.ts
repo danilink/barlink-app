@@ -1,6 +1,7 @@
-import { Component, OnInit} from '@angular/core';
-import {Restaurant} from '../../restaurant/restaurant';
-import {RestaurantService} from '../../restaurant/restaurant-service';
+import { Component, OnInit } from '@angular/core';
+import { Restaurant } from '../../restaurant/restaurant';
+import { RestaurantService } from '../../restaurant/restaurant-service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'barlink-header',
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit{
 
   restaurant: Restaurant;
 
-  constructor(private restaurantService: RestaurantService) { }
+  constructor(private restaurantService: RestaurantService, private translate: TranslateService) { }
 
 
   ngOnInit(): void {
@@ -25,4 +26,8 @@ export class HeaderComponent implements OnInit{
           const dom: any = document.querySelector('body');
           dom.classList.toggle('push-right');
       }
+
+  changeLang(language: string) {
+        this.translate.use(language);
+    }
 }
