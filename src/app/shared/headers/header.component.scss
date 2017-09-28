@@ -1,4 +1,5 @@
-$topnav-background-color: rgba(13,36,60,.85);
+$topnav-background-color: #fafafa;
+$topnav-color: #434343;
 
 .header .navbar {
     background: $topnav-background-color !important;
@@ -13,4 +14,12 @@ $topnav-background-color: rgba(13,36,60,.85);
 .show>.dropdown-menu {
     display: block;
     opacity: 1;
+}
+
+.navbar-dark .navbar-brand {
+  color: $topnav-color;
+}
+
+.navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+ color: $topnav-color;
 }

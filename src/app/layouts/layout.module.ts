@@ -10,8 +10,9 @@ import { HomeComponent }  from '../home/index';
 import { TablePaginationUser }  from '../admin/users/index';
 import { ExpensesComponent } from '../expenses';
 import { DataTableModule } from 'angular-4-data-table';
-import { MdTableModule } from '@angular/material';
+import { MdTableModule,MdMenuModule, MdIconModule, MdButtonModule } from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -19,7 +20,10 @@ import { CdkTableModule } from '@angular/cdk/table';
         LayoutRoutingModule,
         TranslateModule,
         DataTableModule,
+        MdIconModule,
+        MdButtonModule,
         MdTableModule,
+        MdMenuModule,
         CdkTableModule
     ],
     declarations: [
