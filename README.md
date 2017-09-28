@@ -1,6 +1,13 @@
 # BarlinkApp
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+##libraries
+npm install @ngx-translate/core --save
+npm install @ngx-translate/http-loader --save
+npm install @angular/material @angular/cdk --save
+npm install @angular/animations --save
+npm install --save hammerjs
+npm install angular-4-data-table --save
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
