@@ -1,7 +1,7 @@
 import {DataSource} from '@angular/cdk/collections';
 import {UserService} from './user-service';
 import {User} from './user';
-import {MdPaginator} from '@angular/material';
+import {MatPaginator} from '@angular/material';
 import {Observable} from 'rxjs/Observable';
 
 export class UserDataSource extends DataSource<User> {

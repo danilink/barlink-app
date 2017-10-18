@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {MdPaginator} from '@angular/material';
+import {MatPaginator} from '@angular/material';
 import {DataSource} from '@angular/cdk/collections';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {Observable} from 'rxjs/Observable';
