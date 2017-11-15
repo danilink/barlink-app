@@ -22,11 +22,6 @@ export class HeaderComponent implements OnInit{
     });
   }
 
-  toggleSidebar() {
-          const dom: any = document.querySelector('body');
-          dom.classList.toggle('push-right');
-      }
-
   changeLang(language: string) {
         this.translate.use(language);
     }
