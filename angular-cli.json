@@ -18,15 +18,11 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "../node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
-        "../node_modules/font-awesome/scss/font-awesome.scss",
-        "../node_modules/angular-bootstrap-md/scss/mdb-free.scss",
         "styles.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
-        "../node_modules/tether/dist/js/tether.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.js"
+        "../node_modules/tether/dist/js/tether.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

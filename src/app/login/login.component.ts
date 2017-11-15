@@ -1,21 +1,19 @@
-import { Component} from '@angular/core';
-import { Address} from '../address/address';
-import { AddressService } from '../address/address-service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { routerTransition } from '../router.animations';
+import {MatFormFieldControl} from '@angular/material/form-field';
 
 @Component({
-  selector: 'barlink-home',
-  templateUrl: 'home.component.html',
-  providers: [AddressService]
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss']
 })
-export class HomeComponent {
+export class LoginComponent implements OnInit {
+    constructor(public router: Router) {}
 
-  addresses: Address[] = [];
+    ngOnInit() {}
 
-  constructor(private addressService: AddressService) { }
-
-  ngOnInit(): void {
-    this.addressService.getAddresses()
-      .then(addresses => this.addresses = addresses.slice(1, 5));
-  }
-
+    onLoggedin() {
+        localStorage.setItem('isLoggedin', 'true');
+    }
 }

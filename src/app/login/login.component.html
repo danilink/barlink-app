@@ -1,12 +1,17 @@
-<div class="container-fluid">
-  <h3>My dashboard </h3>
+<div class="login-container">
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="mail">
+    </mat-form-field>
 
-  <h4>Top Address</h4>
-  <div class="grid grid-pad">
-    <a *ngFor="let address of addresses"  [routerLink]="['/detail', address.id]"  class="col-1-4">
-      <div class="module address">
-        <h4>{{address.name}}</h4>
-      </div>
-    </a>
-  </div>
+    <mat-form-field>
+      <input matInput type="password" placeholder="password"  class="login-right-align">
+    </mat-form-field>
+
+    <button mat-raised-button mat-accent color="primary">
+        <span mat-button-wrapper>
+                    LOGIN
+                </span>
+    </button>
+  </form>
 </div>
