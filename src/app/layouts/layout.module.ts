@@ -8,7 +8,8 @@ import { HeaderComponent, SidebarComponent } from '../shared';
 import { HomeComponent }  from '../home/index';
 import { TablePaginationUser }  from '../admin/users/index';
 import { ExpensesComponent } from '../expenses';
-import { MatTableModule,MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MatTableModule,MatMenuModule, MatIconModule, MatButtonModule, MatSidenavModule,
+         MatToolbarModule, MatSelectModule, MatCardModule} from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
@@ -20,6 +21,10 @@ import { CdkTableModule } from '@angular/cdk/table';
         MatButtonModule,
         MatTableModule,
         MatMenuModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatSelectModule,
+        MatCardModule,
         CdkTableModule
     ],
     declarations: [
