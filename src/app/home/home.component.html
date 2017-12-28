@@ -1,7 +1,7 @@
 <div class="container-fluid">
-  <h3>My dashboard </h3>
+  <h3>{{ 'company_name' | translate }}</h3>
 
-  <h4>Top Address</h4>
+  <!-- <h4>Top Address</h4>
   <div class="grid grid-pad">
     <a *ngFor="let address of addresses"  [routerLink]="['/detail', address.id]"  class="col-1-4">
       <div class="module address">
@@ -9,4 +9,23 @@
       </div>
     </a>
   </div>
-</div>
+</div> -->
+
+<mat-tab-group class="app-tab-group">
+  <mat-tab label="{{'advices' | translate}}">
+    <div class="app-tab-content">
+        <table-pagination-user></table-pagination-user>
+    </div>
+  </mat-tab>
+  <mat-tab label="Tab 3">
+    <ng-template mat-tab-label>
+      ⭐
+    </ng-template>
+    <div class="app-tab-content">
+    </div>
+  </mat-tab>
+  <mat-tab label="Tab 2">
+    <div class="app-tab-content">
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -3,24 +3,24 @@
 
   <span class="app-spacer"></span>
 
-  <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>more_vert</mat-icon>Menu
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>dialpad</mat-icon> Menu
   </button>
 
   <button mat-button [matMenuTriggerFor]="language">
-    <mat-icon>language</mat-icon>{{ 'Language' | translate }}
+    <mat-icon>language</mat-icon> {{ 'Language' | translate }}
   </button>
 
   </mat-toolbar>
 
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>dialpad</mat-icon>
-      <span>Redial</span>
+    <button mat-menu-item [routerLink]="['/income']" [routerLinkActive]="['router-link-active']">
+      <mat-icon>monetization_on</mat-icon>
+      <span>{{ 'incomes' | translate }}</span>
     </button>
-    <button mat-menu-item disabled>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voicemail</span>
+    <button mat-menu-item [routerLink]="['/expenses']" [routerLinkActive]="['router-link-active']">
+      <mat-icon>money_off</mat-icon>
+      <span>{{ 'expenses' | translate }}</span>
     </button>
     <button mat-menu-item>
       <mat-icon>notifications_off</mat-icon>

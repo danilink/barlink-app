@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { Address} from '../address/address';
 import { AddressService } from '../address/address-service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'barlink-home',
