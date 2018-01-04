@@ -1,12 +1,19 @@
-import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+import { NgModule} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MatFormFieldModule,
+         MatInputModule,
+         MatIconModule,
+         MatCardModule,
+         MatTabsModule,
+         MatButtonModule } from '@angular/material';
 
 export function HttpLoaderFactory(http: HttpClient) {
     // for development
@@ -16,7 +23,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,
@@ -24,6 +32,12 @@ export function HttpLoaderFactory(http: HttpClient) {
         FormsModule,
         HttpClientModule,
         AppRoutingModule,
+        //MatFormFieldModule,
+        //MatIconModule,
+        MatCardModule,
+        MatTabsModule,
+        MatButtonModule,
+        MatInputModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
@@ -33,8 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         })
     ],
     providers: [],
-    bootstrap: [AppComponent],
-    schemas: [ NO_ERRORS_SCHEMA ]
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

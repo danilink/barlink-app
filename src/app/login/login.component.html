@@ -1,17 +1,46 @@
 <div class="login-container">
-  <form>
-    <mat-form-field>
-      <input matInput placeholder="mail">
-    </mat-form-field>
+<mat-tab-group (selectedTabChange)="tabChanged($event)" [(selectedIndex)]="selectedIndex">
+  <mat-tab  [label]='textLabel'  >
+    <div class="app-tab-content">
+      <mat-card class="login-card">
+      <mat-card-content>
+        <!-- <form (ngSubmit)="onLoggedin()" #formlogi="ngForm"> -->
+          <mat-form-field>
+            <input matInput placeholder="username">
+          </mat-form-field>
 
-    <mat-form-field>
-      <input matInput type="password" placeholder="password"  class="login-right-align">
-    </mat-form-field>
+          <mat-form-field>
+            <input matInput type="password" placeholder="password"  class="login-right-align">
+          </mat-form-field>
 
-    <button mat-raised-button mat-accent color="primary">
-        <span mat-button-wrapper>
-                    LOGIN
-                </span>
-    </button>
-  </form>
+        <!-- </form> -->
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button mat-raised-button mat-accent (click)="login()">LOGIN</button>
+      </mat-card-actions>
+    </mat-card>
+    </div>
+  </mat-tab>
+  <mat-tab label="Register">
+    <div class="app-tab-content">
+      <mat-card class="login-card">
+      <mat-card-content>
+        <form (ngSubmit)="onLoggedin()" #formlogi="ngForm">
+          <mat-form-field>
+            <input matInput placeholder="username">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput type="password" placeholder="password"  class="login-right-align">
+          </mat-form-field>
+
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button mat-raised-button >REGISTER</button>
+      </mat-card-actions>
+    </mat-card>
+    </div>
+  </mat-tab>
+</mat-tab-group>
 </div>
