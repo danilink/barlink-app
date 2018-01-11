@@ -12,7 +12,7 @@ export class HomeComponent {
 
   addresses: Address[] = [];
 
-  constructor(private addressService: AddressService) { }
+  constructor(public addressService: AddressService) { }
 
   ngOnInit(): void {
     this.addressService.getAddresses()

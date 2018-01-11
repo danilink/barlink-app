@@ -7,24 +7,23 @@
   position: fixed;
   transform: translate(-50%, -50%);
 }
-//
-// .login-container > * {
-//   width: 100%;
-// }
-//
-.login-right-align {
-  text-align: right;
-}
-//
-// input .login-right-align {
-//   -moz-appearance: textfield;
-// }
-//
-// input.login-right-align::-webkit-outer-spin-button,
-// input.login-right-align::-webkit-inner-spin-button {
-//   display: none;
-// }
 
+input.login-right-align::-webkit-outer-spin-button,
+input.login-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+.mat-tab-group {
+  background-color: rgba(77, 136, 95, 0.22);
+}
+
+.mat-form-field {
+    width: 80%;
+}
+
+.mat-card-actions {
+  margin-top: 20px;
+}
 
 .login-card {
   width: 400px;

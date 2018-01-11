@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { routerTransition } from '../router.animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTabChangeEvent } from '@angular/material';
@@ -11,39 +11,51 @@ import { MatTabChangeEvent } from '@angular/material';
 })
 export class LoginComponent implements OnInit {
 
+  hide = true;
+  returnUrl: string;
+  model: any = {};
+  loading = false;
+
   @Input('label')
    textLabel= "Login page"
-
    selectedIndex = 0;
 
-    model: any = {};
-    loading = false;
+  constructor(public route: ActivatedRoute, public router: Router) {}
 
-    constructor(public router: Router) {}
+  ngOnInit() {
+    // reset login status
+    //this.authenticationService.logout();
 
-    ngOnInit() {
-      console.log("login component")
-    }
+    // get return url from route parameters or default to '/'
+    this.returnUrl = this.route
 
-    onLoggedin() {
-        localStorage.setItem('isLoggedin', 'true');
-    }
+    .snapshot.queryParams['returnUrl'] || '/';
+    console.log("login component")
+     if (localStorage.getItem('isLoggedin')) {
+      this.router.navigate(['expenses']);
+     }
+  }
 
-    tabChanged(tabChangeEvent: MatTabChangeEvent): void {
-      console.log(tabChangeEvent);
-    }
+  onLoggedin() {
+  }
 
-    login() {
-      console.log("login oki")
-        this.loading = true;
-        // this.authenticationService.login(this.model.username, this.model.password)
-        //     .subscribe(
-        //         data => {
-        //             this.router.navigate([this.returnUrl]);
-        //         },
-        //         error => {
-        //             this.alertService.error(error);
-        //             this.loading = false;
-        //         });
-    }
+  tabChanged(tabChangeEvent: MatTabChangeEvent): void {
+    console.log(tabChangeEvent);
+  }
+
+  login() {
+    console.log("login oki")
+      this.loading = true;
+      localStorage.setItem('isLoggedin', 'true');
+      this.router.navigate(['home']);
+      // this.authenticationService.login(this.model.username, this.model.password)
+      //     .subscribe(
+      //         data => {
+      //             this.router.navigate([this.returnUrl]);
+      //         },
+      //         error => {
+      //             this.alertService.error(error);
+      //             this.loading = false;
+      //         });
+  }
 }
