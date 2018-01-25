@@ -1,13 +1,14 @@
 import { Injectable }     from '@angular/core';
-import {USERS} from './mock-users';
-import {User} from './user';
-import {Observable} from 'rxjs/Observable';
+import { USERS } from './mock-users';
+import { User } from './user';
+import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
-
-const BASE_URL = 'http://localhost:3000';
+import { environment } from './../../../environments/environment';
 
 @Injectable()
 export class UserService {
+
+    private API_URL  = environment.api_url + '/users'
 
     constructor (public http: HttpClient) {}
 

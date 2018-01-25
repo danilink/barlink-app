@@ -3,11 +3,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { routerTransition } from '../router.animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTabChangeEvent } from '@angular/material';
+import { AuthenticationService } from './authentication-service';
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.scss']
+    styleUrls: ['./login.component.scss'],
+    providers: [AuthenticationService]
 })
 export class LoginComponent implements OnInit {
 
@@ -20,20 +22,17 @@ export class LoginComponent implements OnInit {
    textLabel= "Login page"
    selectedIndex = 0;
 
-  constructor(public route: ActivatedRoute, public router: Router) {}
+  constructor(public route: ActivatedRoute,
+              public router: Router,
+              public authenticationService: AuthenticationService) {}
 
   ngOnInit() {
     // reset login status
-    //this.authenticationService.logout();
+    this.authenticationService.logout();
 
     // get return url from route parameters or default to '/'
-    this.returnUrl = this.route
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
 
-    .snapshot.queryParams['returnUrl'] || '/';
-    console.log("login component")
-     if (localStorage.getItem('isLoggedin')) {
-      this.router.navigate(['expenses']);
-     }
   }
 
   onLoggedin() {
@@ -44,18 +43,15 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log("login oki")
-      this.loading = true;
-      localStorage.setItem('isLoggedin', 'true');
-      this.router.navigate(['home']);
-      // this.authenticationService.login(this.model.username, this.model.password)
-      //     .subscribe(
-      //         data => {
-      //             this.router.navigate([this.returnUrl]);
-      //         },
-      //         error => {
-      //             this.alertService.error(error);
-      //             this.loading = false;
-      //         });
+    this.loading = true;
+    this.authenticationService.login(this.model.username, this.model.password)
+            .subscribe(
+                data => {
+                    this.router.navigate([this.returnUrl]);
+                },
+                error => {
+                    console.log(error);
+                    this.loading = false;
+                });
   }
 }
