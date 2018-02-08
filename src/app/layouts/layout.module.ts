@@ -9,7 +9,8 @@ import { HomeComponent }  from '../home/index';
 import { TablePaginationUser }  from '../admin/users/index';
 import { ExpensesComponent } from '../expenses';
 import { MatTableModule,MatMenuModule, MatIconModule, MatButtonModule, MatSidenavModule,
-         MatToolbarModule, MatSelectModule, MatCardModule, MatTabsModule, MatInputModule} from '@angular/material';
+         MatToolbarModule, MatSelectModule, MatCardModule, MatTabsModule, MatInputModule,
+         MatListModule} from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CdkTableModule } from '@angular/cdk/table';
         MatTabsModule,
         CdkTableModule,
         MatInputModule,
+        MatListModule,
         FormsModule
     ],
     declarations: [

@@ -1,1 +1,8 @@
-
+<mat-nav-list>
+  <mat-list-item *ngFor="let expense of expenses">
+     <a matLine href="...">{{ expense.description}}</a>
+     <button mat-icon-button (click)="showInfo(expense.description)">
+        <mat-icon>info</mat-icon>
+     </button>
+  </mat-list-item>
+</mat-nav-list>
