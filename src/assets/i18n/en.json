@@ -7,5 +7,9 @@
     "company_name": "Restaurant",
     "advices": "Advices",
     "main": "Main",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "title": "Title",
+    "description": "Description",
+    "price": "Price",
+    "paymentdate": "Payment date"
 }

@@ -7,10 +7,11 @@ import { LayoutComponent } from './layout.component';
 import { HeaderComponent, SidebarComponent } from '../shared';
 import { HomeComponent }  from '../home/index';
 import { TablePaginationUser }  from '../admin/users/index';
-import { ExpensesComponent } from '../expenses';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { ExpensesComponent, ExpenseDetailDialog } from '../expenses';
 import { MatTableModule,MatMenuModule, MatIconModule, MatButtonModule, MatSidenavModule,
          MatToolbarModule, MatSelectModule, MatCardModule, MatTabsModule, MatInputModule,
-         MatListModule} from '@angular/material';
+         MatListModule, MatDatepickerModule, MatDialogModule,} from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
@@ -30,7 +31,10 @@ import { CdkTableModule } from '@angular/cdk/table';
         CdkTableModule,
         MatInputModule,
         MatListModule,
-        FormsModule
+        FormsModule,
+        MatDatepickerModule,
+        MatMomentDateModule,
+        MatDialogModule,
     ],
     declarations: [
         LayoutComponent,
@@ -38,7 +42,9 @@ import { CdkTableModule } from '@angular/cdk/table';
         HomeComponent,
         SidebarComponent,
         TablePaginationUser,
-        ExpensesComponent
-    ]
+        ExpensesComponent,
+        ExpenseDetailDialog
+    ],
+    entryComponents: [ExpenseDetailDialog]
 })
 export class LayoutModule { }

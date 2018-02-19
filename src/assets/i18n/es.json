@@ -7,5 +7,9 @@
     "company_name": "Restaurante",
     "advices": "Avisos",
     "main": "Principal",
-    "dashboard": "Inicio"
+    "dashboard": "Inicio",
+    "title": "Titulo",
+    "description": "Descripción",
+    "price": "Precio",
+    "paymentdate": "Fecha de pago"
 }

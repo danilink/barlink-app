@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ExpenseService {
 
-    private API_URL  = environment.api_url + '/expense'
+    private API_URL  = environment.api_url + '/expenses'
 
     constructor (public http: HttpClient) {}
 

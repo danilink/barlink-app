@@ -1,20 +1,21 @@
 import { NgModule} from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+//import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+//import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './login/auth-guard';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { MatFormFieldModule,
+/*import { MatFormFieldModule,
          MatInputModule,
          MatIconModule,
          MatCardModule,
          MatTabsModule,
-         MatButtonModule } from '@angular/material';
+         MatButtonModule } from '@angular/material';*/
 
 export function HttpLoaderFactory(http: HttpClient) {
     // for development
@@ -24,21 +25,22 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
     declarations: [
-        AppComponent,
-        LoginComponent
+        AppComponent
+      //  LoginComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        FormsModule,
+        CommonModule,
+      //  FormsModule,
         HttpClientModule,
         AppRoutingModule,
-        //MatFormFieldModule,
+        /*MatFormFieldModule,
         MatIconModule,
         MatCardModule,
         MatTabsModule,
         MatButtonModule,
-        MatInputModule,
+        MatInputModule,*/
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

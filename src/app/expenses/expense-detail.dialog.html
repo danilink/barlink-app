@@ -1,0 +1,19 @@
+<div class="expense-form">
+    <mat-form-field>
+      <input matInput placeholder="{{'title' | translate}}">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <textarea matInput placeholder="{{'description' | translate}}"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput placeholder="{{'price' | translate}}">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="{{'paymentdate' | translate}}">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
