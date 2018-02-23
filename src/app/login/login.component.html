@@ -3,15 +3,17 @@
   <mat-tab  [label]='textLabel'  >
     <div class="app-tab-content">
       <mat-card class="login-card">
-      <mat-card-content>
+      <mat-card-content [formGroup]="form">
         <!-- <form (ngSubmit)="onLoggedin()" #formlogi="ngForm"> -->
           <mat-form-field>
-            <input matInput placeholder="username" name="username" [(ngModel)]="model.username" required>
+            <input matInput placeholder="username" name="username" formControlName="username" required>
+            <mat-error *ngIf="isFieldValid('username')">a</mat-error>
           </mat-form-field>
 
           <mat-form-field>
-            <input matInput type="password" placeholder="password" name="password" [(ngModel)]="model.password"required [type]="hide ? 'password' : 'text'">
+            <input matInput type="password" placeholder="password" name="password" formControlName="password" required [type]="hide ? 'password' : 'text'">
             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            <mat-error *ngIf="isFieldValid('password')">b</mat-error>
           </mat-form-field>
 
         <!-- </form> -->

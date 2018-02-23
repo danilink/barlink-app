@@ -11,5 +11,7 @@
     "title": "Title",
     "description": "Description",
     "price": "Price",
-    "paymentdate": "Payment date"
+    "paymentdate": "Payment date",
+    "usernameerror": "You must enter a user name",
+    "passworderror": "You must enter a password"
 }

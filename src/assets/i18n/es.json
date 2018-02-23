@@ -11,5 +11,7 @@
     "title": "Titulo",
     "description": "Descripción",
     "price": "Precio",
-    "paymentdate": "Fecha de pago"
+    "paymentdate": "Fecha de pago",
+    "usernameerror": "Usuario obligatorio",
+    "passworderror": "Constraseña obligatoria"
 }
