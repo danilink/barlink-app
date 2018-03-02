@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { routerTransition } from '../router.animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTabChangeEvent } from '@angular/material';
-import { AuthenticationService } from './authentication-service';
+import { AuthenticationService } from './../auth/authentication.service';
 import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutRoutingModule } from './layout.routes';
 import { LayoutComponent } from './layout.component';
 import { HeaderComponent, SidebarComponent } from '../shared';
@@ -35,6 +35,7 @@ import { CdkTableModule } from '@angular/cdk/table';
         MatDatepickerModule,
         MatMomentDateModule,
         MatDialogModule,
+        ReactiveFormsModule
     ],
     declarations: [
         LayoutComponent,

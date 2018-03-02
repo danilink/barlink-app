@@ -16,6 +16,10 @@ export class ExpenseService {
       return this.http.get<Expense[]>(this.API_URL);
     }
 
+    createExpense(): Observable<Expense> {
+      return this.http.post<Expense>(this.API_URL, "");
+    }
+
     private handleError(error: any) {
       let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server   error';
