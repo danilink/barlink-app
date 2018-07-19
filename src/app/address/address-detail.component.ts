@@ -1,4 +1,5 @@
-import 'rxjs/add/operator/switchMap';
+import { switchMap, map } from 'rxjs/operators';
+import { interval, pipe } from 'rxjs';
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
@@ -22,8 +23,8 @@ export class AddressDetailComponent {
     ) {}
 
   ngOnInit(): void {
-      this.route.params
-      .switchMap((params: Params) => this.addressService.getAddress(+params['id']))
+      this.route.params.pipe(
+      switchMap((params: Params) => this.addressService.getAddress(+params['id'])))
       .subscribe(address => this.address = address);
   }
 

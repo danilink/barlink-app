@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { Expense } from './expense';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'expense-detail-dialog',

@@ -1,7 +1,7 @@
 import { Injectable }     from '@angular/core';
 import { USERS } from './mock-users';
 import { User } from './user';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from './../../../environments/environment';
 
@@ -13,7 +13,7 @@ export class UserService {
     constructor (public http: HttpClient) {}
 
     getItemAll(): Observable<User[]> {
-      return Observable.of(USERS);
+      return Observable.create(USERS);
     }
 
     getUser(): Observable<any> {

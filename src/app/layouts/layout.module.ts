@@ -4,6 +4,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutRoutingModule } from './layout.routes';
 import { LayoutComponent } from './layout.component';
+import { AddressDetailComponent, AddressListComponent } from '../address/index';
+import { PageNotFoundComponent } from './not-found.component';
 import { HeaderComponent, SidebarComponent } from '../shared';
 import { HomeComponent }  from '../home/index';
 import { TablePaginationUser }  from '../admin/users/index';
@@ -40,11 +42,14 @@ import { CdkTableModule } from '@angular/cdk/table';
     declarations: [
         LayoutComponent,
         HeaderComponent,
+        PageNotFoundComponent,
         HomeComponent,
         SidebarComponent,
         TablePaginationUser,
         ExpensesComponent,
-        ExpenseDetailDialog
+        ExpenseDetailDialog,
+        AddressDetailComponent,
+        AddressListComponent
     ],
     entryComponents: [ExpenseDetailDialog]
 })

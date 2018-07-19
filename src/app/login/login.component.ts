@@ -49,6 +49,10 @@ export class LoginComponent implements OnInit {
     console.log(tabChangeEvent);
   }
 
+  register() {
+    console.info("not implement yet!")
+  }
+
   login() {
     this.loading = true;
     this.authenticationService.login(this.form.get('username').value, this.form.get('password').value)
