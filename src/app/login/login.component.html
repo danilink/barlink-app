@@ -7,13 +7,13 @@
         <!-- <form (ngSubmit)="onLoggedin()" #formlogi="ngForm"> -->
           <mat-form-field>
             <input matInput placeholder="username" name="username" formControlName="username" required>
-            <mat-error *ngIf="isFieldValid('username')">a</mat-error>
+            <mat-error *ngIf="isFieldValid('username')">No válido</mat-error>
           </mat-form-field>
 
           <mat-form-field>
             <input matInput type="password" placeholder="password" name="password" formControlName="password" required [type]="hide ? 'password' : 'text'">
             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-            <mat-error *ngIf="isFieldValid('password')">b</mat-error>
+            <mat-error *ngIf="isFieldValid('password')">No válido</mat-error>
           </mat-form-field>
 
         <!-- </form> -->
@@ -27,21 +27,38 @@
   <mat-tab label="Register">
     <div class="app-tab-content">
       <mat-card class="login-card">
-      <mat-card-content>
+      <mat-card-content [formGroup]="registerForm">
           <mat-form-field>
-            <input matInput placeholder="username">
+            <input matInput placeholder="name" required formControlName="name">
+            <mat-error *ngIf="isFieldValidRegister('name')">No válido</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput placeholder="surname" required formControlName="surname">
+              <mat-error *ngIf="isFieldValidRegister('surname')">No válido</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="username" required formControlName="username">
+            <mat-error *ngIf="isFieldValidRegister('username')">No válido</mat-error>
           </mat-form-field>
 
           <mat-form-field>
-            <input matInput placeholder="email" required>
+            <input matInput placeholder="email" required formControlName="email">
+            <mat-error *ngIf="isFieldValidRegister('email')">No válido</mat-error>
           </mat-form-field>
 
           <mat-form-field>
-            <input matInput type="password" placeholder="password"  required>
+              <input matInput placeholder="role" required formControlName="role">
+              <mat-error *ngIf="isFieldValidRegister('role')">No válido</mat-error>
+            </mat-form-field>
+
+          <mat-form-field>
+            <input matInput type="password" placeholder="password"  required formControlName="password">
+            <mat-error *ngIf="isFieldValidRegister('password')">No válido</mat-error>
           </mat-form-field>
 
           <mat-form-field>
-            <input matInput type="password" placeholder="repeat password" required>
+            <input matInput type="password" placeholder="repeat password" required formControlName="passwordbis">
+            <mat-error *ngIf="isFieldValidRegister('passwordbis')">No válido</mat-error>
           </mat-form-field>
 
       </mat-card-content>

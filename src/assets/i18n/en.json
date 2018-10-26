@@ -1,4 +1,5 @@
 {
+    "close": "Close",
     "Spanish": "Spanish",
     "English": "English",
     "Language": "Languaje",
@@ -13,5 +14,17 @@
     "price": "Price",
     "paymentdate": "Payment date",
     "usernameerror": "You must enter a user name",
-    "passworderror": "You must enter a password"
+    "passworderror": "You must enter a password",
+    "food": "Dishes",
+    "new": "New",
+    "food.name": "Dish name",
+    "food.category": "Category",
+    "food.drink": "Drink",
+    "food.incoming": "Incoming",
+    "food.mainDish": "Main dish",
+    "food.dessert": "Dessert",
+    "food.dishes": "Dishes",
+    "food.dishes.description": "Dishes list available",
+    "error.login.name": "Incorrect username",
+    "error.login.pwd": "Wrong password!"
 }

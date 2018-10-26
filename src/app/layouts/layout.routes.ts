@@ -4,6 +4,7 @@ import { LayoutComponent } from './layout.component';
 import { HomeComponent }   from '../home/index';
 import { TablePaginationUser }   from '../admin/users/index';
 import { ExpensesComponent }   from '../expenses/index';
+import { FoodComponent }   from '../food/food.component';
 
 const routes: Routes = [
     {
@@ -11,7 +12,8 @@ const routes: Routes = [
         children: [
             { path: 'home', component: HomeComponent },
             { path: 'income', component: TablePaginationUser },
-            { path: 'expenses', component: ExpensesComponent }
+            { path: 'expenses', component: ExpensesComponent },
+            { path: 'food', component: FoodComponent }
           ]
 
             /*

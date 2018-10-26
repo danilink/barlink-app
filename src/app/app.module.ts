@@ -34,7 +34,11 @@ export function HttpLoaderFactory(http: HttpClient) {
             }
         })
     ],
-    providers: [AuthGuard],
+    providers: [AuthGuard, {
+        provide: HTTP_INTERCEPTORS,
+        useClass: TokenInterceptor,
+        multi: true
+       }],
     bootstrap: [AppComponent]
 })
 export class AppModule {

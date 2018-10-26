@@ -1,4 +1,5 @@
 {
+    "close": "Cerrar",
     "Spanish": "Español",
     "English": "Inglés",
     "Language": "Idioma",
@@ -13,5 +14,17 @@
     "price": "Precio",
     "paymentdate": "Fecha de pago",
     "usernameerror": "Usuario obligatorio",
-    "passworderror": "Constraseña obligatoria"
+    "passworderror": "Constraseña obligatoria",
+    "food": "Platos",
+    "new": "Nuevo",
+    "food.name": "Nombre del plato",
+    "food.category": "Categoría",
+    "food.drink": "Bebida",
+    "food.incoming": "Entrante",
+    "food.mainDish": "Plato principal",
+    "food.dessert": "Postre",
+    "food.dishes": "Platos",
+    "food.dishes.description": "Listado de platos disponibles",
+    "error.login.name": "Incorrect username",
+    "error.login.pwd": "Wrong password!"
 }

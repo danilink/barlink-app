@@ -20,9 +20,10 @@ export class LoginComponent implements OnInit {
   loading = false;
 
   form: FormGroup;
+  registerForm: FormGroup;
 
   @Input('label')
-   textLabel= "Login page"
+   textLabel= "Login"
    selectedIndex = 0;
 
   constructor(public route: ActivatedRoute,
@@ -34,6 +35,16 @@ export class LoginComponent implements OnInit {
     this.form = this.formBuilder.group({
       username: [null, Validators.required],
       password: [null, [Validators.required]]});
+
+      this.registerForm = this.formBuilder.group({
+        name: [null, Validators.required],
+        surname: [null, Validators.required],
+        username: [null, Validators.required],
+        email: [null, Validators.required, Validators.email],
+        role: [null, Validators.required],
+        password: [null, Validators.required],
+        passwordbis: [null, Validators.required]
+      });
     // reset login status
     this.authenticationService.logout();
 
@@ -46,11 +57,29 @@ export class LoginComponent implements OnInit {
   }
 
   tabChanged(tabChangeEvent: MatTabChangeEvent): void {
-    console.log(tabChangeEvent);
+    if (tabChangeEvent.index === 1) {
+      console.log("tab register selected")
+    }
   }
 
   register() {
-    console.info("not implement yet!")
+    this.loading = true;
+    if (this.registerForm.valid) {
+      let form = new FormData();
+      console.log(this.registerForm.value);
+      this.authenticationService.register(this.registerForm.value)
+      .subscribe(data => {
+        console.log(data)
+      }, 
+      error => {
+        console.log("error")
+      })
+
+    } else {
+      this.loading = false;
+      return;
+    }
+            
   }
 
   login() {
@@ -68,5 +97,9 @@ export class LoginComponent implements OnInit {
 
   isFieldValid(field: string) {
     return !this.form.get(field).valid && this.form.get(field).touched;
+  }
+
+  isFieldValidRegister(field: string) {
+    return !this.registerForm.get(field).valid && this.registerForm.get(field).touched;
   }
 }

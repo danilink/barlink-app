@@ -1,13 +1,24 @@
 <nav class="sidebar mdb-sidenav" [ngClass]="{sidebarPushRight: isActive}">
     <ul class="list-group">
-        <a routerLink="/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'main' | translate }}
-        </a>
-        <a [routerLink]="['/income']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'incomes' | translate }}
-        </a>
-        <a [routerLink]="['/expenses']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-table"></i>&nbsp;{{ 'expenses' | translate }}
-        </a>
+        <li>
+            <a routerLink="/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="material-icons">home</i><span>{{ 'main' | translate }}</span>
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/income']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="fa fa-fw fa-bar-chart-o"></i><span>{{ 'incomes' | translate }}</span>
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/expenses']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="fa fa-fw fa-table"></i><span>{{ 'expenses' | translate }}</span>
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/food']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="fa fa-fw fa-table"></i><span>{{ 'food' | translate }}</span>
+            </a>
+        </li>
     </ul>
 </nav>

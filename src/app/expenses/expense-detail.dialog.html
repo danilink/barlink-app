@@ -1,19 +1,19 @@
 <div class="expense-form">
   <form class="expense-form-container" [formGroup]="expenseForm" (ngSubmit)="onSubmit(expenseForm.value, expenseForm.valid)">
     <mat-form-field>
-      <input matInput placeholder={{ 'title' | translate}} [formControl]="title">
+      <input matInput placeholder="{{ 'title' | translate }}" formControlName="title"/>
     </mat-form-field>
   
     <mat-form-field>
-      <textarea matInput placeholder={{ 'description' | translate}} [formControl]="description"/>
+      <textarea matInput placeholder="{{ 'description' | translate}}" formControlName="description"></textarea>
     </mat-form-field>
   
     <mat-form-field>
-      <input matInput placeholder={{ 'price' | translate}} type="number" [formControl]="price">
+      <input matInput placeholder="{{ 'price' | translate}}" type="number" formControlName="price"/>
     </mat-form-field>
   
     <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder={{ 'paymentdate' | translate}} [formControl]="paymentdate">
+      <input matInput [matDatepicker]="picker" placeholder="{{ 'paymentdate' | translate}}" formControlName="paymentdate"/>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>

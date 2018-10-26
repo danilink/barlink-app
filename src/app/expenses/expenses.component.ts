@@ -3,7 +3,7 @@ import { Expense } from './expense';
 import { ExpenseService } from './expenses-services';
 import { Observable } from 'rxjs/Observable';
 import { ExpenseDetailDialog } from './expense-detail.dialog'
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog} from '@angular/material';
 
 @Component({
     selector: 'barlink-expenses',
